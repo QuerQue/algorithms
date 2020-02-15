@@ -10,7 +10,16 @@ grid = [[5,3,0,0,7,0,0,0,0],
         [0,0,0,4,1,9,0,0,5],
         [0,0,0,0,8,0,0,7,9]]
 
-def if_possible():
-   pass
-print(np.matrix(grid))
 
+def if_possible(x,y,n):
+   for i in range(9):
+      if n == grid[x][i]:
+         return False
+   for i in range(9):
+      if n == grid[i][y]:
+         return False
+   return True
+         
+         
+print(if_possible(1, 3, 3))
+print(np.matrix(grid))
